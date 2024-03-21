@@ -50,26 +50,31 @@ cat < file1
 
 cat < file2
 ## OUTPUT
+![Screenshot 2024-03-21 102811](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/e579c596-2262-4aa8-99d8-29bd39fa8b52)
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ![Screenshot 2024-03-21 102941](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/37582fb3-5661-462a-9db3-c3552ff08920)
+
 comm file1 file2
  ## OUTPUT
 
- 
+ ![Screenshot 2024-03-21 103109](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/b2cca964-f2db-4f43-bed6-230331ac45dd)
+
 diff file1 file2
 ## OUTPUT
 
+![Screenshot 2024-03-21 103241](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/9c8e37e5-0ea5-4dbc-bc89-a81c8e8fe617)
 
 #Filters
 
 ### Create the following files file11, file22 as follows:
 
 cat > file11
-```
+![Screenshot 2024-03-21 103433](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/321a30f3-5f9d-4099-852e-4679d3d2c773)
+
 Hello world
 This is my world
 ^d
@@ -80,23 +85,27 @@ cat > file22
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 ^d
-```
 
+
+![Screenshot 2024-03-21 103722](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3fcbb97e-eea1-442f-b6ce-344c72db13e3)
 
 cut -c1-3 file11
 ## OUTPUT
 
+![Screenshot 2024-03-21 103846](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/923e34b9-816e-4c27-9ddf-201f57819eaa)
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
+![Screenshot 2024-03-21 103924](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/9f4a017c-25f4-4e43-b0f8-6a8f743cc7ed)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
+![Screenshot 2024-03-21 103952](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/77be0877-2aaf-4467-a505-8fd5fd3abfcc)
 
 cat < newfile 
 ```
@@ -104,17 +113,23 @@ Hello world
 hello world
 ^d
 ````
+![Screenshot 2024-03-21 104212](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/99984836-3250-44b3-a23c-7fb6ed5223b8)
+
 cat > newfile 
 Hello world
 hello world
- 
+ ![Screenshot 2024-03-21 104226](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/93e07b35-5eee-4ee6-ba9a-586323328f44)
+
 grep Hello newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 104725](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/28ed7b06-f0f7-4ed4-895d-0fc22f2695a5)
 
 
 grep hello newfile 
 ## OUTPUT
+![Screenshot 2024-03-21 104736](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/1c7974b3-4426-437a-b458-5cdaee07a8aa)
+
 
 
 
@@ -122,27 +137,32 @@ grep hello newfile
 grep -v hello newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 104743](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/48e1f6f6-fde4-4fb2-83cd-c402f06345a5)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+![Screenshot 2024-03-21 104751](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/a47221c6-c2eb-4708-b1a3-782d6361c473)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
+![Screenshot 2024-03-21 104758](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/c027d811-39ec-4eae-8c97-304d5bbdfcbd)
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
+![Screenshot 2024-03-21 104943](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/7cc34e5b-3ced-4437-be48-5f413cf30a77)
 
 
 
 grep -w -n world newfile   
 ## OUTPUT
+![Screenshot 2024-03-21 105211](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/4995ff57-d3ad-488d-9a2f-62f543bbf0e2)
 
 
 cat < newfile 
@@ -154,6 +174,7 @@ Unix is predecessor
 Linux is best in this World
 ^d
 ```
+![Screenshot 2024-03-21 105427](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/5df7629a-3b11-4808-9ae6-f8b13bd946d1)
 
 cat > newfile
 ```
@@ -162,63 +183,78 @@ hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
-^d
+^d```
  ```
+![Screenshot 2024-03-21 105516](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/50a67961-13d9-45e4-b380-b5bf99f8bbb4)
+
+
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 105558](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/cca7bc3a-638d-4f80-8141-bfa54f553b33)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
 
+![Screenshot 2024-03-21 105955](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/d03ef707-d6dc-4c25-b1c2-df99aeb26d1c)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 110045](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/0530062f-a4b5-4e60-b3de-277d32168c86)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 110153](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/7a76ed0a-d35d-4a8c-a9b1-fcb7656cc820)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
 
+![Screenshot 2024-03-21 110312](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3802c7bc-e059-4710-85a7-ec1c3e748a94)
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 110437](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/04cfcf43-47c0-4e98-a947-92aa3526f9db)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
 
+![Screenshot 2024-03-21 110604](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3111ddbb-38de-476b-92de-8c3b760696a0)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+![Screenshot 2024-03-21 110646](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/1ac94536-e23e-4065-9167-d921417cbd62)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+![Screenshot 2024-03-21 110839](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/71f44c2f-d104-462f-8785-68a0007ad3de)
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+![Screenshot 2024-03-21 111021](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/d375eb14-d5ef-4302-9df1-1c97974e9052)
 
 
 egrep l{2} newfile
 ## OUTPUT
 
+![Screenshot 2024-03-21 111328](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/c8fc2d90-e362-4cd2-8f02-10c610da646e)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+![Screenshot 2024-03-21 111420](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/677db0d0-4fa4-41bc-ad8a-b1e6a1df7dd3)
 
 
 cat > file23
@@ -233,26 +269,31 @@ cat > file23
 1001 | Ram | 10000 | HR
 ^d
 ```
+![Screenshot 2024-03-21 111956](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/95f61db0-d1d1-41e4-9435-8ddcd443d837)
 
 
 sed -n -e '3p' file23
 ## OUTPUT
 
 
+![Screenshot 2024-03-21 112540](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/f0d87f74-f752-4b18-b5b8-b50a7918ff88)
 
 sed -n -e '$p' file23
 ## OUTPUT
 
 
+![Screenshot 2024-03-21 113822](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3e185f63-5c58-4309-aefd-10022584fa0d)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
+![Screenshot 2024-03-21 114000](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/c97cbba1-e572-4267-b1ed-1002bfecf628)
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
+![Screenshot 2024-03-21 114047](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/b90f9006-7756-406b-8cc9-55f59f34a2bf)
 
 
 sed  '/tom/s/5000/6000/' file23
