@@ -30,6 +30,8 @@ s.n. dasgupta
 sumit chakrobarty
 ^d
 ```
+![Screenshot 2024-03-21 102129](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/1dbb0ec7-e247-4a7a-9d92-ab3e624d8fcb)
+
 cat > file2
 ```
 anil aggarwal
@@ -42,6 +44,7 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
+![Screenshot 2024-03-21 102249](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/fdf2069b-bc71-4953-8a8c-b81d936f5ff0)
 
 
 
