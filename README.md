@@ -479,15 +479,21 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
- 
+```
+File name is ./scriptest.sh
+File name is scriptest.sh
+First arg. is 1
+Second arg. is 2
+Third arg. is 3
+Fourth arg. is
+The $@ is 1 2 3
+The $\# is $#
+The $$ is 124
+ ```
 ls file1
 ## OUTPUT
+![307826499-e004d6ed-48ab-45a6-bfd8-ab8faa8788b5](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/19943430-9fff-41ef-a887-e011b392d7cb)
 
-echo $?
-## OUTPUT 
-./one
-bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
@@ -529,14 +535,16 @@ fi
 ```
 ##OUTPUT
 
+![307828678-669c08af-be10-452a-a16b-2d960c674987](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/96d2172d-891e-49b1-a189-fe3372e8b089)
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
-
+``
+baseball is less than hockey
+``
 # check file ownership
 cat < psswdperm.sh 
 ```bash
@@ -609,6 +617,7 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
+![307832276-efa998fe-2806-4eca-ace7-1d71dda33cf6](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/d87b630f-fa38-44ab-b5bc-86417b653276)
 
 
 # using numeric test comparisons
@@ -652,6 +661,7 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+![307833052-545398c0-2c77-4e44-b53a-6ef098142c6f](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3d9c645d-9f56-4dcd-a53c-83b9d91c3adb)
 
 # check if a file
 cat > ifnested.sh 
@@ -701,6 +711,7 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ##OUTPUT
+![307833801-3f9abd70-a9ff-43f5-9b46-39fd1f374d55](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/d4c2864e-4848-49a6-b0bc-bba13677a5e1)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -729,7 +740,15 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+```
+Welcome Ram
+Please enjoy your visit
+Welcome Rahim
+Please enjoy your visit
+Special testing account
+gganesh, Do not forget to logout when you're done
+Sorry, you are not allowed here
+```
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -745,378 +764,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
-# using the case command
-cat >casecheck.sh 
-```bash
-case $USER in
-Ram | Robert)
-echo "Welcome, $USER"
-echo "Please enjoy your visit";;
-Rahim)
-echo "Special testing account";;
-gganesh)
-echo "$USER, Do not forget to log off when you're done";;
-*)
-echo "Sorry, you are not allowed here";;
-esac
-```
-$ chmod 755 casecheck.sh 
- 
-$ ./casecheck.sh 
- 
-cat > whiletest
-```bash
-#!/bin/bash
-#while command test
-var1=10
-while [ $var1 -gt 0 ]
-do
-echo $var1
-var1=$[ $var1 - 1 ]
-done
-```
-$ chmod 755 whiletest.sh
- 
-$ ./whiletest.sh
- 
- 
-cat untiltest.sh 
-```bash
-\#using the until command
-var1=100
-until [ $var1 -eq 0 ]
-do
-echo $var1
-var1=$[ $var1 - 25 ]
-done
-``` 
-$ chmod 755 untiltest.sh
- 
- 
- 
-cat forin1.sh 
-```bash
-\#!/bin/bash
-\#basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
- ```
- 
-$ chmod 755 forin1.sh
- 
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
- ```
- 
-$ chmod 755 forin2.sh
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-$ chmod 755 forin2.sh
- 
-$ ./forin2.sh 
- 
-cat forin3.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don\'t know if "this'll" work
-do
-echo "word:$test"
-done
-```
-$ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
-
-## OUTPUT
-cat forinfile.sh 
-```bash
-#!/bin/bash
-# reading values from a file
-file="cities"
-for state in `cat $file`
-do
-echo "Visit beautiful $file“
-done
-```
-$ chmod 777 forinfile.sh
-$ cat cities
-Hyderabad
-Alampur
-Basara
-Warangal
-Adilabad
-Bhadrachalam
-Khammam
-
-## OUTPUT
-
-
-cat forctype.sh 
-```bash
-#!/bin/bash
-# testing the C-style for loop
-for (( i=1; i <= 5; i++ ))
-do
-echo "The value of i is $i"
-done
-````
-$ chmod 755 forctype.sh
-$ ./forctype.sh 
-## OUTPUT
-
-cat forctype1.sh 
-```bash
-#!/bin/bash
-# multiple variables
-for (( a=1, b=5; a <= 5; a++, b-- ))
-do
-echo "$a - $b"
-done
-```
-$ chmod 755 forctype.sh
-$ ./forctype1.sh 
-## OUTPUT
-
-cat fornested1.sh 
-```bash
-#!/bin/bash
-# nesting for loops
-for (( a = 1; a <= 3; a++ ))
-do
-echo "Starting loop $a:"
-for (( b = 1; b <= 3; b++ ))
-do
-echo " Inside loop: $b"
-done
-done
-```
-$ chmod 755 fornested1.sh
- 
-$ ./fornested1.sh 
- ## OUTPUT
-
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-break
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-## OUTPUT
-
-$ chmod 755 forbreak.sh
- 
-$ ./forbreak.sh 
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-continue
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-
- 
-$ chmod 755 forcontinue.sh
- 
-$ ./forcontinue.sh 
-## OUTPUT
- 
-cat exread.sh 
-```bash
-#!/bin/bash
-# testing the read command
-echo -n "Enter your name: "
-read name
-echo "Hello $name, welcome to my program. "
- ```
- 
-$ chmod 755 exread.sh 
- 
-$ ./exread.sh 
-## OUTPUT
-
-
- cat exread1.sh
-```bash
-#!/bin/bash
-# testing the read command
-read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
-``` 
-$ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
-$ ./exread1.sh 
- 
-cat funcex.sh
-```bash
-#!/bin/bash
-# trying to access script parameters inside a function
-function func {
-echo $[ $1 * $2 ]
-}
-if [ $# -eq 2 ]
-then
-value=`func $1 $2`
-echo "The result is $value"
-else
-echo "Usage: badtest1 a b"
-fi
-```
-## OUTPUT
- ./funcex.sh 
-
- 
- ./funcex.sh 1 2
-
- 
-cat argshift.sh
-```bash
-#!/bin/bash 
- while (( "$#" )); do 
-  echo $1 
-  shift 
-done
-```
-$ chmod 777 argshift.sh
-
-## OUTPUT
-$ ./argshift.sh 1 2 3
- 
- cat argshift1.sh
-```bash
- #/bin/bash 
- # store arguments in a special array 
-args=("$@") 
-# get number of elements 
-ELEMENTS=${#args[@]} 
- # echo each element in array  
-# for loop 
-for (( i=0;i<$ELEMENTS;i++)); do 
-    echo ${args[${i}]} 
-done
-```
-$ chmod 777 argshift.sh
-## OUTPUT
-$ ./argshift.sh 1 2 3
- 
-cat argshift.sh
-```bash
-#!/bin/bash 
-set -x 
-while (( "$#" )); do 
-  echo $1 
-  shift 
-done
-set +x
-```
-## OUTPUT
- ./argshift.sh 1 2 3
- 
- 
-cat > nc.awk
-```bash
-BEGIN{}
-{
-print len=length($0),"\t",$0 
-wordcount+=NF
-chrcnt+=len
-}
-END {
-print "total characters",chrcnt 
-print "Number of Lines are",NR
-print "No of Words count:",wordcount
-}
- ```
-cat>data.dat
-```bash
-bcdfghj
-abcdfghj
-bcdfghj
-ebcdfghj
-bcdfghj
-ibcdfghj
-bcdfghj
-obcdfghj
-bcdfghj
-ubcdfghj
-```
-awk -f nc.awk data.dat
-## OUTPUT 
- 
-cat > palindrome.sh
-```bash
-#num=545
-echo "Enter the number"
-read num
-s=0
-rev=""
-temp=$num
-while [ $num -gt 0 ]
-do
-	# Get Remainder
-	s=$(( $num % 10 ))
-	# Get next digit
-	num=$(( $num / 10 ))
-	# Store previous number and
-	# current digit in reverse
-	rev=$( echo ${rev}${s} )
-done
-if [ $temp -eq $rev ];
-then
-	echo "Number is palindrome"
-else
-	echo "Number is NOT palindrome"
-fi
-```
-## OUTPUT 
+![307834688-73bf26c3-76c2-4dbe-8aa4-213a1cef52fb](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/9ba523fb-3610-48ef-bec2-26960584ae6f)
 
 
 # RESULT:
