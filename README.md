@@ -303,28 +303,33 @@ sed  '/tom/s/5000/6000/' file23
 
 sed -n -e '1,5p' file23
 ## OUTPUT
+![Screenshot 2024-03-24 225736](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/b9e54493-c2d8-4328-9856-1326a4c75550)
 
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
+![Screenshot 2024-03-24 225918](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/b9caa9fa-e039-45e4-9aca-65172526c183)
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
+![Screenshot 2024-03-24 230013](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/e660fb8b-cfda-4e10-80a7-d9126ad34e7d)
 
 
 
 seq 10 
 ## OUTPUT
+![Screenshot 2024-03-24 230034](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/da23d47e-54de-4d7c-9e89-f6143ddfacad)
 
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
+![Screenshot 2024-03-24 230143](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/35f8a672-7bc4-4ef2-9c5c-bef4a6558666)
 
 
 seq 10 | sed -n '2,~4p'
@@ -334,19 +339,23 @@ seq 10 | sed -n '2,~4p'
 
 seq 3 | sed '2a hello'
 ## OUTPUT
+![Screenshot 2024-03-24 230641](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/ef90dc44-9cb4-463d-9546-786838971128)
 
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
+![Screenshot 2024-03-24 230715](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/f795a026-6e18-40d0-8050-671a8a7c9812)
 
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
+![Screenshot 2024-03-24 230751](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/98068c09-7630-4d68-a561-9cf338b4f7ac)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
+![Screenshot 2024-03-24 230841](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/2c09d031-72fb-4e32-972f-70440ed0c570)
 
 
 
@@ -364,6 +373,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
+![Screenshot 2024-03-24 231040](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/22c337e9-6a2f-4fa2-9275-5ab98d80b9e0)
 
 
 cat > file22
@@ -377,6 +387,7 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
+![Screenshot 2024-03-24 231221](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/0fb61656-d15e-4e4c-9fdb-e787a97bd160)
 
 
 
@@ -384,6 +395,7 @@ uniq file22
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+![Screenshot 2024-03-24 231556](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/30017b4e-199a-45a0-8e44-c2207695abb7)
 
 cat < urllist.txt
 ```
@@ -392,15 +404,20 @@ www. google. com
 www. mrcet.... com
 ^d
  ```
+![Screenshot 2024-03-24 231857](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/f4fd3aa4-353d-40e9-aec5-f187c05ae966)
+
 cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
- ```
+```
+![Screenshot 2024-03-24 231912](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/e9ff8114-fc1e-4dad-8dc5-b4b5d6bb6dbe)
+
 cat urllist.txt | tr -d ' '
  ## OUTPUT
- 
+ ![Screenshot 2024-03-24 232812](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/3d3722a0-b498-480b-a5d8-db22dc26fb77)
+
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
@@ -418,6 +435,7 @@ i cant stop
 for this non stop movement
 stop
 ```
+![Screenshot 2024-03-24 233219](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/7be20d94-812d-448c-9925-017bfe5bf951)
 
 cat herecheck.txt
 ## OUTPUT
@@ -438,6 +456,7 @@ echo 'The $$ is ' $$
 ps
 ^d
  ```
+![Screenshot 2024-03-24 233300](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/50ecd577-fb99-43f4-b211-76bfc576e4ec)
 
 cat scriptest.sh 
 ```bash
@@ -453,6 +472,7 @@ echo 'The $\# is ' $\#
 echo 'The $$ is ' $$
 ps
 ```
+![Screenshot 2024-03-24 233311](https://github.com/ARCH2006/OS-Linux-commands-Shell-script/assets/144300030/38edeac0-1705-4e86-9379-ca79e3b227bf)
  
 chmod 777 scriptest.sh
  
